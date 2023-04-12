@@ -9,14 +9,32 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.310.0",
+    "@aws-sdk/util-dynamodb": "^3.310.0",
+    "@next/font": "^13.3.0",
+    "@nextui-org/react": "^1.0.0-beta.12",
+    "@types/isomorphic-fetch": "^0.0.36",
     "@types/node": "18.15.11",
+    "@types/node-fetch": "2",
     "@types/react": "18.0.34",
     "@types/react-dom": "18.0.11",
+    "@types/uuid": "^9.0.1",
+    "aws-crt": "^1.15.14",
+    "aws-sdk": "^2.1356.0",
+    "encoding": "^0.1.13",
     "eslint": "8.38.0",
     "eslint-config-next": "13.3.0",
+    "isomorphic-fetch": "^3.0.0",
+    "moment": "^2.29.4",
     "next": "13.3.0",
+    "next-auth": "^4.22.0",
+    "node-fetch": "2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "typescript": "5.0.4"
-  }
+    "sass": "^1.62.0",
+    "sass-loader": "^13.2.2",
+    "typescript": "5.0.4",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {}
 }
