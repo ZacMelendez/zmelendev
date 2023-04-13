@@ -2,11 +2,16 @@
 
 import Link from "next/link";
 import styles from "./Header.module.scss";
-import ZachOverflow from "../../icons/ZachOverflow";
+import ZachOverflow from "../../client/icons/ZachOverflow";
 import React, { useContext, useEffect, useState } from "react";
-import UIThemeContext from "../../context/UIThemeContext";
+import { useSession } from "next-auth/react";
+import UIThemeContext from "../../client/context/UIThemeContext";
+import { Switch } from "@nextui-org/react";
+import { MdDarkMode, MdLightMode } from "react-icons/md";
 
 export default function Header() {
+    const { data: session } = useSession();
+
     const { theme, setTheme, menuOpen, setMenuOpen } =
         useContext(UIThemeContext);
     const [screenSize, setScreenSize] = useState<number>(1200);
@@ -37,7 +42,7 @@ export default function Header() {
                     primary={theme === "dark" ? "#e5e5e3" : "#454545"}
                 />
                 <p>zach</p>
-                <p>overflow</p>
+                <p style={{ fontWeight: "600" }}>overflow</p>
             </div>
             <ul className={styles.nav}>
                 <li>
@@ -46,14 +51,25 @@ export default function Header() {
                     </Link>
                 </li>
                 <li>
-                    <Link className="nav-link" href="/posts/1">
-                        Posts
+                    <Link className="nav-link" href="/blog">
+                        Blog
                     </Link>
                 </li>
+                {session?.user?.email === "zacmelendez@gmail.com" && (
+                    <li>
+                        <Link className="nav-link" href="/create">
+                            Create
+                        </Link>
+                    </li>
+                )}
                 <li>
-                    <Link className="nav-link" href="/">
-                        Create
-                    </Link>
+                    <Switch
+                        color="warning"
+                        checked={theme == "light"}
+                        onChange={handleClick}
+                        iconOff={<MdLightMode />}
+                        iconOn={<MdDarkMode />}
+                    />
                 </li>
             </ul>
         </div>

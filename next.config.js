@@ -2,7 +2,13 @@
 const nextConfig = {
   experimental: {
     appDir: true,
-    typedRoutes: true,
+    turbo: {
+      loaders: {
+        '.scss': ['sass-loader', "style-loader",
+          "css-loader"],
+      }
+    },
+    optimizeCss: true,
   },
 }
 

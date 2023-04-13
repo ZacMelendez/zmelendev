@@ -1,5 +1,5 @@
 // export { default as ImageCard } from "./ImageCard/ImageCard";
-export { default as Header } from "./Header/Header";
+export { default as Header } from "../../app/Header/Header";
 // export { default as DraftSelect } from "./DraftSelect/DraftSelect";
 // export { default as TextEditor } from "./MarkdownEditor";
 // export { default as PostMenu } from "./PostMenu/PostMenu";

@@ -1,10 +1,9 @@
-.header {
-    width: auto;
-    height: auto;
-    background-color: var(--color-bg-primary);
-    // transition: 0.5s ease-in-out;
-    z-index: 10;
-    padding: 0 35px;
-    position: sticky;
-    top: 0;
+.main {
+    width: 100%;
+    .body {
+        padding: 15px 20%;
+        @media screen and (max-width: 600px) {
+            padding: 15px 25px;
+        }
+    }
 }

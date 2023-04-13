@@ -1,7 +1,7 @@
 import moment, { MomentInput } from "moment";
 import React, { useEffect, useState } from "react";
 import PostsContext from "../context/PostsContext";
-import { BlogEntry, PostCategory } from "../types";
+import { BlogEntry, PostCategory } from "../../types";
 import * as uuid from "uuid";
 
 const initValue = `# Conbibitur tu Pelates murmure et altera via

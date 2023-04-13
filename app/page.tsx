@@ -1,6 +1,5 @@
-import { Inter } from "next/font/google";
 import styles from "./page.module.scss";
-import { About } from "../src/containers";
+import { About } from "../client/containers";
 
 export default function Home() {
     return (

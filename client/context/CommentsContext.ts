@@ -1,5 +1,5 @@
 import { createContext, Dispatch, SetStateAction } from "react";
-import { CommentEntry } from "../types";
+import { CommentEntry } from "../../types";
 
 declare global {
     interface CommentsContextProps {

@@ -2,9 +2,9 @@ import moment from "moment";
 import Link from "next/link";
 import React, { ReactNode, useContext } from "react";
 import PostsContext from "../../context/PostsContext";
-import { BlogEntry, PostCategory } from "../../types";
+import { BlogEntry, PostCategory } from "../../../types";
 import styles from "./PostList.module.scss";
-import { WebDev, IoTDev, CloudDev } from "../../icons/";
+import { WebDev, IoTDev, CloudDev } from "../../icons";
 
 const getIcon = (category: PostCategory): ReactNode => {
     switch (category) {

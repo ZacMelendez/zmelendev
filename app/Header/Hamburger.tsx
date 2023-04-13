@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import UIThemeContext from "../../context/UIThemeContext";
+import UIThemeContext from "../../client/context/UIThemeContext";
 
 import styles from "./Hamburger.module.scss";
 

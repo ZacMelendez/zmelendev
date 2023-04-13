@@ -1,7 +1,7 @@
 "use client";
 
 import { createContext, Dispatch, SetStateAction } from "react";
-import { BlogEntry, PostCategory } from "../types";
+import { BlogEntry, PostCategory } from "../../types";
 
 declare global {
     interface PostsContextProps {
